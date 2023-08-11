@@ -24,11 +24,11 @@ def call() {
 	env.EXE_AGENT = "main_agent_label"
 
 	pipeline {
-		environment {
-			// Custom Build Properties
-			// https://www.jenkins.io/doc/pipeline/steps/custom-build-properties/
-			env.TASK_NAME = "${params['buildName']}"
-		}
+		// environment {
+		// 	// Custom Build Properties
+		// 	// https://www.jenkins.io/doc/pipeline/steps/custom-build-properties/
+		// 	env.TASK_NAME = "${params['buildName']}"
+		// }
 		options {
 			buildDiscarder(logRotator(numToKeepStr:'10'))
 			timestamps()
